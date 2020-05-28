@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    #main {
+      width: 450px;
+      margin: 0 auto;
+    }
+
+    #main h1 {
+      text-align: center;
+    }
+
+    .todos-wrapper {
+      border: 1px solid #ccc;
+    }
+
+    .todo-form,
+    .todo-item,
+    .tool-bar {
+      display: flex;
+      padding: 8px 5px;
+    }
+
+    .todo-form,
+    .todo-item {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .todo-item.completed .todo-content {
+      color: gray;
+      text-decoration: line-through;
+    }
+
+    .new-todo-wrapper,
+    .btn-group,
+    .todo-content {
+      flex-grow: 1;
+    }
+
+    .new-todo-wrapper input {
+      width: 100%;
+    }
+
+    .todo-status {
+      align-self: center;
+    }
+
+    .btn-group {
+      text-align: center;
+    }
+
+    .btn-group .active {
+      color: gold;
+    }
+  </style>
+  <title>Todos</title>
+</head>
+<body>
+  <div id='main'>
+    <header>
+      <h1>todos</h1>
+    </header>
+    <div class='todos-wrapper'>
+      <header>
+        <form class='todo-form'>
+          <div>
+            <input type='checkbox' name='completeAll' />
+          </div>
+          <div class='new-todo-wrapper'>
+            <input type='text' name='newToDo' />
+          </div>
+        </form>
+      </header>
+      <ul>
+        <li>
+          <div class='todo-item completed'>
+            <div class='todo-status'>
+              <input type='checkbox' checked />
+            </div>
+            <div class='todo-content'>
+              Learn HTML
+            </div>
+            <div>
+              <button type='button'>X</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class='todo-item'>
+            <div class='todo-status'>
+              <input type='checkbox' />
+            </div>
+            <div class='todo-content'>
+              Learn CSS
+            </div>
+            <div>
+              <button type='button'>X</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class='todo-item'>
+            <div class='todo-status'>
+              <input type='checkbox' />
+            </div>
+            <div class='todo-content'>
+              Learn ReactJS
+            </div>
+            <div>
+              <button type='button'>X</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <footer>
+        <div class='tool-bar'>
+          <div>2 item left</div>
+          <div class='btn-group'>
+            <button type='button' class='active'>All</button>
+            <button type='button'>Active</button>
+            <button type='button'>Completed</button>
+          </div>
+          <div>
+            <button type='button'>Clear completed</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
